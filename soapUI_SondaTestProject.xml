@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2849ae75-862a-494b-8a8d-07bf3f3a3ea9" activeEnvironment="Default" name="sonda" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="90b27f2a-0bb6-499b-b062-0883cc692f07" wsaVersion="NONE" name="WebService1Soap12" type="wsdl" bindingName="{http://tempuri.org/}WebService1Soap12" soapVersion="1_2" anonymous="optional" definition="https://localhost:44328/sonda.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint></con:endpoints><con:operation id="7b20d76e-f02e-4e5b-b3d0-e3a80c757c31" isOneWay="false" action="http://tempuri.org/IniciaSonda" name="IniciaSonda" bindingOperationName="IniciaSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2c3cf445-77d1-4182-ab7d-e1b128fae5bc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:IniciaSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/WebService1Soap/IniciaSondaRequest"/></con:call></con:operation><con:operation id="dab13bcb-808c-4bf3-b2f0-ce62a6e435fd" isOneWay="false" action="http://tempuri.org/MoveSonda" name="MoveSonda" bindingOperationName="MoveSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4f599629-6f1b-4c1b-a2d9-385e5d627182" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:MoveSonda>\r
+         <!--Optional:-->\r
+         <tem:movimentos>?</tem:movimentos>\r
+      </tem:MoveSonda>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/WebService1Soap/MoveSondaRequest"/></con:call></con:operation><con:operation id="cd97aa3c-64ed-4bc2-9b89-5a1280fb973e" isOneWay="false" action="http://tempuri.org/StatusSonda" name="StatusSonda" bindingOperationName="StatusSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="59a89c49-5815-49fe-83af-a343b29fcd41" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:StatusSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/WebService1Soap/StatusSondaRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="1cedd14c-371a-460f-9291-9887d646cd7f" wsaVersion="NONE" name="WebService1Soap" type="wsdl" bindingName="{http://tempuri.org/}WebService1Soap" soapVersion="1_1" anonymous="optional" definition="https://localhost:44328/sonda.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://localhost:44328/sonda.asmx?wsdl"><con:part><con:url>https://localhost:44328/sonda.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MoveSonda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="movimentos" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveSondaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveSondaResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IniciaSonda">
+        <s:complexType/>
+      </s:element>
+      <s:element name="IniciaSondaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IniciaSondaResult" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatusSonda">
+        <s:complexType/>
+      </s:element>
+      <s:element name="StatusSondaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusSondaResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MoveSondaSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveSonda"/>
+  </wsdl:message>
+  <wsdl:message name="MoveSondaSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveSondaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IniciaSondaSoapIn">
+    <wsdl:part name="parameters" element="tns:IniciaSonda"/>
+  </wsdl:message>
+  <wsdl:message name="IniciaSondaSoapOut">
+    <wsdl:part name="parameters" element="tns:IniciaSondaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="StatusSondaSoapIn">
+    <wsdl:part name="parameters" element="tns:StatusSonda"/>
+  </wsdl:message>
+  <wsdl:message name="StatusSondaSoapOut">
+    <wsdl:part name="parameters" element="tns:StatusSondaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="MoveSonda">
+      <wsdl:input message="tns:MoveSondaSoapIn"/>
+      <wsdl:output message="tns:MoveSondaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="IniciaSonda">
+      <wsdl:input message="tns:IniciaSondaSoapIn"/>
+      <wsdl:output message="tns:IniciaSondaSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="StatusSonda">
+      <wsdl:input message="tns:StatusSondaSoapIn"/>
+      <wsdl:output message="tns:StatusSondaSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="MoveSonda">
+      <soap:operation soapAction="http://tempuri.org/MoveSonda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciaSonda">
+      <soap:operation soapAction="http://tempuri.org/IniciaSonda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusSonda">
+      <soap:operation soapAction="http://tempuri.org/StatusSonda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="MoveSonda">
+      <soap12:operation soapAction="http://tempuri.org/MoveSonda" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IniciaSonda">
+      <soap12:operation soapAction="http://tempuri.org/IniciaSonda" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusSonda">
+      <soap12:operation soapAction="http://tempuri.org/StatusSonda" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44328/sonda.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44328/sonda.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint></con:endpoints><con:operation id="78029b27-3b8d-4d6f-a459-02994fdcdc8d" isOneWay="false" action="http://tempuri.org/IniciaSonda" name="IniciaSonda" bindingOperationName="IniciaSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="21079d95-8439-4e95-a432-ca4f97141be4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:IniciaSonda/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IniciaSonda"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="24e39c00-6a04-45a9-99f7-a6e9a05d7ae5" isOneWay="false" action="http://tempuri.org/MoveSonda" name="MoveSonda" bindingOperationName="MoveSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b6ac0989-04e1-4cb3-b04a-1023b29793aa" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:MoveSonda>\r
+         <!--Optional:-->\r
+         <tem:movimentos>GE|M|M|M|GD|M|M</tem:movimentos>\r
+      </tem:MoveSonda>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/MoveSonda"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8c25ec94-9746-490f-a4d6-4329cc583619" isOneWay="false" action="http://tempuri.org/StatusSonda" name="StatusSonda" bindingOperationName="StatusSonda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2f0b5e2c-d3d9-4d5f-acac-a17f2961ca5d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:StatusSonda/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/StatusSonda"/></con:call></con:operation></con:interface><con:testSuite id="b2bd4d88-dea4-4513-b932-af70bb4582c5" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d4a34eef-d15b-46e2-9b16-055411e55a39" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="request" name="Movimento1:GE|M|M|M|GD|M|M" id="1f9b7fdb-6e96-480f-a5b4-1b990e5e0ea8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap</con:interface><con:operation>MoveSonda</con:operation><con:request name="Movimento1:GE|M|M|M|GD|M|M" id="91cce1fd-57ab-47cc-ab41-a226c7d91091"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:MoveSonda>
+         <!--Optional:-->
+         <tem:movimentos>GE|M|M|M|GD|M|M</tem:movimentos>
+      </tem:MoveSonda>
+   </soapenv:Body>\r
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Response" id="e1b755b9-904a-44e4-b2bf-25b27b4f028e"/><con:assertion type="Schema Compliance" id="507f568f-2c77-45fd-afc3-f8da20c5cb68"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="09106036-7e68-4bfa-9780-41d11cd51dba" name="Contains"><con:configuration><token>{x:2,y:3,face:D}</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="StatusSondaMovimento1" id="b7b0a24a-e577-4f28-b803-27a788e3930d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap12</con:interface><con:operation>StatusSonda</con:operation><con:request name="StatusSondaMovimento1" id="6d0d98c4-fc99-4db3-a7b4-954a2815526a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:StatusSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="faaca4f0-b45a-4b66-b825-cd7e0461564a"/><con:assertion type="Schema Compliance" id="449e2450-33a4-4ff3-8fdc-05f4bb586e3d"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="e625ecf1-993b-49a8-871b-f4eb81021fa8" name="Contains"><con:configuration><token>{x:2,y:3,face:D}</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Movimento2:GE|M|M|M|GD|M|M" id="e27f5339-63d4-4ee8-95e7-aeed7d66813c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap</con:interface><con:operation>MoveSonda</con:operation><con:request name="Movimento2:GE|M|M|M|GD|M|M" id="91cce1fd-57ab-47cc-ab41-a226c7d91091"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:MoveSonda>
+         <!--Optional:-->
+         <tem:movimentos>GE|M|M|M|GD|M|M</tem:movimentos>
+      </tem:MoveSonda>
+   </soapenv:Body>\r
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Response" id="e1b755b9-904a-44e4-b2bf-25b27b4f028e"/><con:assertion type="Schema Compliance" id="507f568f-2c77-45fd-afc3-f8da20c5cb68"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="09106036-7e68-4bfa-9780-41d11cd51dba" name="Contains"><con:configuration><token>erro</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="StatusSondaMovimento2" id="c8f3fa89-0963-4061-a787-5864ab420936"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap12</con:interface><con:operation>StatusSonda</con:operation><con:request name="StatusSondaMovimento2" id="6d0d98c4-fc99-4db3-a7b4-954a2815526a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:StatusSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="faaca4f0-b45a-4b66-b825-cd7e0461564a"/><con:assertion type="Schema Compliance" id="449e2450-33a4-4ff3-8fdc-05f4bb586e3d"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="IniciaSonda1" id="ccc7cb94-3876-46fa-b2ba-de4ed27840c0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap</con:interface><con:operation>IniciaSonda</con:operation><con:request name="IniciaSonda1" id="c3891416-6699-4e30-94dd-7d770a460b9a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:IniciaSonda/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="85017ec7-3f86-4f63-99cf-eb7c6eda0d07"/><con:assertion type="Schema Compliance" id="7e7dff11-51a0-4522-80b0-77b39b30ab94"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="20eab0fe-90d3-427e-9cb6-253faebe5063" name="Contains"><con:configuration><token>true</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="StatusSondaInicial1" id="b221fe84-bbf3-4cb5-b229-26dc9446359b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap12</con:interface><con:operation>StatusSonda</con:operation><con:request name="StatusSondaInicial1" id="6d0d98c4-fc99-4db3-a7b4-954a2815526a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:StatusSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="faaca4f0-b45a-4b66-b825-cd7e0461564a"/><con:assertion type="Schema Compliance" id="449e2450-33a4-4ff3-8fdc-05f4bb586e3d"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="e625ecf1-993b-49a8-871b-f4eb81021fa8" name="Contains"><con:configuration><token>{x:0,y:0,face:D}</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="MovimentoErro:M|M|M|M|M|M" id="b981e797-cd1e-4132-baa8-84d1776225be"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap</con:interface><con:operation>MoveSonda</con:operation><con:request name="MovimentoErro:M|M|M|M|M|M" id="91cce1fd-57ab-47cc-ab41-a226c7d91091"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:MoveSonda>
+         <!--Optional:-->
+         <tem:movimentos>M|M|M|M|M|M</tem:movimentos>
+      </tem:MoveSonda>
+   </soapenv:Body>\r
+</soapenv:Envelope>
+]]></con:request><con:assertion type="SOAP Response" id="e1b755b9-904a-44e4-b2bf-25b27b4f028e"/><con:assertion type="Schema Compliance" id="507f568f-2c77-45fd-afc3-f8da20c5cb68"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="09106036-7e68-4bfa-9780-41d11cd51dba" name="Contains"><con:configuration><token>erro</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="StatusSondaMovimentoErro" id="17ce9c30-2414-434b-8db4-8afeb4f80af1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap12</con:interface><con:operation>StatusSonda</con:operation><con:request name="StatusSondaMovimentoErro" id="6d0d98c4-fc99-4db3-a7b4-954a2815526a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:StatusSonda/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="faaca4f0-b45a-4b66-b825-cd7e0461564a"/><con:assertion type="Schema Compliance" id="449e2450-33a4-4ff3-8fdc-05f4bb586e3d"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="IniciaSonda2" id="2d39b944-0bfe-4d93-bb7c-44d11d840deb"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebService1Soap</con:interface><con:operation>IniciaSonda</con:operation><con:request name="IniciaSonda2" id="c3891416-6699-4e30-94dd-7d770a460b9a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://localhost:44328/sonda.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:IniciaSonda/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="85017ec7-3f86-4f63-99cf-eb7c6eda0d07"/><con:assertion type="Schema Compliance" id="7e7dff11-51a0-4522-80b0-77b39b30ab94"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="20eab0fe-90d3-427e-9cb6-253faebe5063" name="Contains"><con:configuration><token>true</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
